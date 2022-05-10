@@ -6,7 +6,7 @@ CS4248 Group 23 Project: Attention-based Graph Neural Networks for Multi-class F
 
 We augment Long Short-Term Memory neural networks (LSTMs) to include the attention mechanism and empirically show its effectiveness. Then we propose a new model that attaches the attention-based LSTM layers as input to Graph Convolutional Networks (GCNs).
 
-Our report can be found at [`CS4248_Final_Report_Group_23.pdf`](https://github.com/howtoosee/CS4248_NLP_Fake_News_Detection_Attention/CS4248_Final_Report_Group_23.pdf)
+Our report can be found at [`CS4248_Final_Report_Group_23.pdf`](https://github.com/howtoosee/CS4248_NLP_Fake_News_Detection_Attention/blob/main/CS4248_Final_Report_Group_23.pdf)
 
 ## Datasets
 

@@ -279,7 +279,20 @@ def main():
     parser.add_argument("--model_file", dest="model_file", type=str, default='model_bert.t7', help='For evaluating a '
                                                                                                    'saved model')
     args = parser.parse_args()
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+    if torch.cuda.is_available():
+        device = torch.device("cuda")
+    else:
+        try:
+            from torch.backends import mps
+            if mps.is_available() and mps.is_built():
+                device = torch.device("mps")
+            else:
+                device = torch.device("cpu")
+        except:
+            device = torch.device("cpu")
+    print(f"Using device {device}...")
+
     tokenizer = BertTokenizer.from_pretrained(args.bert_model, do_lower_case=args.do_lower_case)
 
     # Create bert model
